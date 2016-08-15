@@ -40,24 +40,24 @@
         app:tabSelectedTextColor="@android:color/white"
         app:tabIndicatorColor="@android:color/white"
         app:tabMode="scrollable"/>
-
-    <lumenghz.com.pullrefresh.PullToRefreshView android:id="@+id/pull_to_refresh"
+<!--
+  <lumenghz.com.pullrefresh.PullToRefreshView android:id="@+id/pull_to_refresh"
+        app:tabMode="scrollable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:lrefresh="rocket"
+        app:lrefresh="sun"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
-
+-->
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:tabMode="scrollable"/>
-
-
+<!--
     </lumenghz.com.pullrefresh.PullToRefreshView>
-
+-->
 
 
 </LinearLayout>

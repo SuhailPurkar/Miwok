@@ -20,14 +20,18 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import java.lang.reflect.Field;
+import android.view.ViewConfiguration;
 
 import lumenghz.com.pullrefresh.PullToRefreshView;
 
 public class MainActivity extends AppCompatActivity {
     private PullToRefreshView mPullToRefreshView;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -36,16 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
+
         // CategoryFragmentPagerAdapter adapter =
            //     new CategoryFragmentPagerAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(new CategoryFragmentPagerAdapter(getSupportFragmentManager(),
                 MainActivity.this));
 
+        makeActionOverflowMenuShown();
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
+ /**       mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
         mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -57,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
                 }, 2);
             }
         });
+**/
+    }
+    private void makeActionOverflowMenuShown() {
+        //devices with hardware menu button (e.g. Samsung Note) don't show action overflow menu
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            if (menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(config, false);
+            }
+        } catch (Exception e) {
 
+        }
     }
 }
