@@ -1,5 +1,5 @@
 # Miwok
-A simple Android app to help you learn the Miwok language.
+A user friendly Android app to help you learn the Miwok language.
 ## Demo
 The gif was recorded on a Android 5.1.1 KitKat device (API Level 22).
 
