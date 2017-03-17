@@ -1,5 +1,5 @@
 # Miwok
-A user friendly Android app to help you learn the Miwok language.
+A user friendly Android app to help you learn the Miwok language. Made during [Udacity Android Basics: Multi-screen Apps](https://www.udacity.com/course/android-basics-multi-screen-apps--ud839).
 ## Demo
 The gif was recorded on a Android 5.1.1 KitKat device (API Level 22).
 
