@@ -6,7 +6,7 @@ The gif was recorded on a Android 5.1.1 KitKat device (API Level 22).
 [<img src="http://i.imgur.com/0nvfTj1.gif" width=200>](http://i.imgur.com/0nvfTj1.gif)
 
 ## License
-[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
+[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  <img src="https://tctechcrunch2011.files.wordpress.com/2017/02/android-studio-logo.png" width="250">
 
 Miwok is licensed under the GNU General Public License.
 
